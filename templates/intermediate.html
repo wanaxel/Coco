@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Course</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='quiz.css') }}">
+</head>
+<body>
+    <div class="course-container">
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <div class="course-content">
+            <h1 id="course-title">Statement</h1>
+            <p id="course-description">
+                A line of code is called a statement. A statement performs a specific task. The output command is an example of a statement.
+                <br><br>
+                System.out.println("Write one, run anywahere!");
+                <br>
+                Question:
+                <br>
+                <button class="answer-button" onclick="checkAnswer('A')">A. Angle bracket></button>
+                <br>
+                <button class="answer-button" onclick="checkAnswer('B')">B. Semicolon;</button>
+            </p>
+            <p id="feedback"></p>
+        </div>
+        <div class="navigation-buttons">
+            <button onclick="previousStep()">❮</button>
+            <button id="next-button" onclick="nextStep()" disabled>❯</button>
+        </div>
+        <a href="{{ url_for('dashboardintermediate')}}">
+        <button class="back-button">Back to Main Page</button>
+        </a>
+    </div>
+    <script src="{{ url_for('static', filename='course2.js') }}"></script>
+</body>
+</html>

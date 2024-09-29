@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <body>
+        <h1 class="welcome">Welcome To Coco</h1>
+        
+         <div class="main-container">
+         <div class="button-container">
+            <a href="{{ url_for('login') }}">
+            <button class="button-main">Sign In</button>
+            </a>
+        
+            <a href="{{ url_for('register') }}">
+            <button class="button-main">Sign Up</button>
+            </a>
+            </div>
+        </div>
+    </body>
+</html>

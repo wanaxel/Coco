@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='difficulty.css') }}">
+</head>
+<body>
+    <h1 class="welcome">Experience</h1>
+    
+    <div class="main-container">
+        <div class="button-container">
+            <div class="button-wrapper">
+                <div class="button-main">
+                    <a href="{{ url_for('dashboardbeginner') }}">
+                        <button>Beginner</button>
+                    </a>
+                </div>
+                <p class="button-description" id="beginner-desc">Just getting started with coding.</p>
+            </div>
+            <div class="button-wrapper">
+                <div class="button-main">
+                    <a href="{{ url_for('dashboardintermediate') }}">
+                    <button>Intermediate</button>
+                    </a>
+                </div>
+                <p class="button-description" id="intermediate-desc">I've created some projects with code.</p>
+            </div>
+            <div class="button-wrapper">
+                <div class="button-main">
+                    <a href="{{ url_for('dashboardexpert') }}">
+                    <button>Expert</button>
+                    </a>
+                </div>
+                <p class="button-description" id="expert-desc">I'm very experienced with coding.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='profile.css') }}">
+</head>
+<body>
+    <div class="sidebar-list">
+        <ul>
+            <li><a href="javascript:void(0);" onclick="goBack()">👤 Back</a></li>
+            <li>─────────</li>
+            <li><a href="{{ url_for('portal') }}">🏠 Home</a></li>
+            <li><a href="{{ url_for('difficulty') }}">📈 Difficulty</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div class="profile-header">
+            <span class="emoji profile-icon">👤</span>
+            <div class="profile-info">
+                <h1>{{ username }}</h1>
+                <p>{{ email }}</p>
+            </div>
+        </div>
+        <div class="form-container">
+            <h2>Update Information</h2>
+            <form action="/profile" method="POST">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" value="{{ username }}" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="{{ email }}" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit" class="update-button"><span class="emoji">💾</span> Update</button>
+            </form>
+        </div>
+        <script>
+            function goBack() {
+                window.history.back();
+            }
+        </script>
+    </div>
+</body>
+</html>

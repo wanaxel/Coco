@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+    <body>
+        
+        <div id="sidebar">
+            <div class="toggle-btn" onclick="show()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul>
+                <li>☰ Menu</li>
+                <li>─────────</li>
+                
+                <a href="{{ url_for('portal') }}">
+                <li>🏠 Home</li>
+                </a>
+
+                <a href="{{ url_for('difficulty') }}">
+                <li>📈 Difficulty</li>
+                </a>
+                
+                <a href="{{ url_for('profile') }}">
+                <li>👤 Profile</li>
+                </a>
+                
+                <a href="{{ url_for('logout') }}">
+                <li>❌ Log Out</li>
+                </a>
+            </ul>
+        </div>
+        
+        
+    <div class="main-container">
+        <div class="title">
+            <h1>Java</h1>
+            <h2>Difficulty: Beginner</h2>
+        </div>
+        <div class="text">
+            <p1>This simple, beginner-friendly Java<br>course require no previous coding<br>knowledge. All you need is a mobile<br>phone or desktop computer and 5<br>minutes a day! You'll learn all about the<br>key concepts of Java, and will be writing<br>clear, working code right from your first<br>lesson.</br></br></br></br></br></br></br></p1>
+        </div>
+        
+        <div class="button-container">
+        <a href="{{ url_for('easy') }}">
+        <button class="start-btn">Start</button>
+        </a>
+        </div>
+
+        <div id="profile" class="section" style="display:none;">
+            <div class="title">
+                <a href="#" onclick="showSection('home')">👤 Back</a>
+                <h1>Profile</h1>
+            </div>
+            <div class="profile-info">
+                <p><strong>Username:</strong> {{ username }}</p>
+                <p><strong>Email:</strong> {{ email }}</p>
+                <h2>Change Details</h2>
+                <button onclick="changeUsername()">Change Username</button>
+                <button onclick="changeEmail()">Change Email</button>
+                <button onclick="changePassword()">Change Password</button>
+            </div>
+        </div>
+    </div>
+        <script>
+            function show() {
+            document.getElementById('sidebar').classList.toggle('active');
+        }
+        </script>
+    </div>
+   </body>     
+</html>

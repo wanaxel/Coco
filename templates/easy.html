@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Course</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='quiz.css') }}">
+</head>
+<body>
+    <div class="course-container">
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <div class="course-content">
+            <h1 id="course-title">Coding</h1>
+            <p id="course-description">
+                Humans use computer programs to communicate with machines. Without computer programs, we wouldn't have smartphones, websites, or even exploration in outer space.
+                <br><br>
+                Learning some coding can help you innovate and create different solutions to problems, giving you a competitive edge in this technology-driven world.
+                <br><br>
+                Question:
+                <br>
+                What's a programming language?
+                <br>
+                <button class="answer-button" onclick="checkAnswer('A')">A. A language used by machines to communicate with aliens</button>
+                <br>
+                <button class="answer-button" onclick="checkAnswer('B')">B. A language used by humans to communicate with machines</button>
+            </p>
+            <p id="feedback"></p>
+        </div>
+        <div class="navigation-buttons">
+            <button onclick="previousStep()">❮</button>
+            <button id="next-button" onclick="nextStep()" disabled>❯</button>
+        </div>
+        <a href="{{ url_for('dashboardbeginner')}}">
+        <button class="back-button">Back to Main Page</button>
+        </a>
+    </div>
+    <script src="{{ url_for('static', filename='course.js') }}"></script>
+</body>
+</html>

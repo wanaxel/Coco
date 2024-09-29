@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In Form</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Sign In</h1>
+    <form method="POST">
+      <input type="text" id="username"  placeholder="Username or email" name="username" required>
+      <input type="password" id="password" placeholder="Password" name="password" required>
+      <input type="submit" value="Confirm">
+    </form>
+    
+    {% with success_messages = messages %}
+      {% if success_messages %}
+        <div class="alert alert-success">
+          <p class="mb-0">
+            {% for message in success_messages %}
+              <p>{{ message }}</p>
+            {% endfor %}
+          </p>
+        </div>
+      {% endif %}
+    {% endwith %}
+    
+    {% with error_messages = get_flashed_messages(with_categories=True) %}
+      {% if error_messages %}
+        <p class="errors">
+          {% for category, messages in error_messages %}
+            {% if category == 'error' %}  
+              {% for message in messages %}
+                <span style="margin: 0; padding: 0;">{{ message }}</span>  {% endfor %}
+            {% endif %}
+          {% endfor %}
+        </p>
+      {% endif %}
+    {% endwith %}
+  </div>
+</body>
+</html>

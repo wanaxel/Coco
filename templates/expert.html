@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Course</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='quiz.css') }}">
+</head>
+<body>
+    <div class="course-container">
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <div class="course-content">
+            <h1 id="course-title">Coding</h1>
+            <p id="course-description">
+                In this lesson we will break down the structure of Java programs and understand how they work.
+                <br><br>
+                The whole code to create a valid Java program that outputs a simple text is the following:
+                <br><br>
+                class Demo{
+                    public static void main(String[] args) {
+                        System.out.println("Hi there");
+                    }
+                }
+                <br></br>
+                The first line of the code defines a class called Demo.
+                <br>
+                class Demo {
+
+                }
+                <br> 
+                In Java, every line of code that can actually run needs to be inside a class. You can call the class anything you want.
+               
+            </p>
+            <p id="feedback"></p>
+        </div>
+        <div class="navigation-buttons">
+            <button onclick="previousStep()">❮</button>
+            <button id="next-button" onclick="nextStep()" disabled>❯</button>
+        </div>
+        <a href="{{ url_for('dashboardexpert')}}">
+        <button class="back-button">Back to Main Page</button>
+        </a>
+    </div>
+    <script src="{{ url_for('static', filename='course3.js') }}"></script>
+</body>
+</html>
