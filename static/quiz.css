@@ -1,0 +1,102 @@
+/* course.css */
+body {
+    font-family: sans-serif;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.course-container {
+    background: #f1f1f1;
+    color: black;
+    padding: 2em;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+}
+
+.progress-container {
+    background: #ddd;
+    border-radius: 25px;
+    height: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    background: #2196F3; /* Blue color */
+    height: 100%;
+    border-radius: 25px;
+    width: 0%;
+    transition: width 0.3s;
+}
+
+.course-content h1 {
+    margin-bottom: 10px;
+}
+
+.course-content p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation-buttons button {
+    background: #2196F3; /* Blue color */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.navigation-buttons button:hover {
+    background: #1976D2; /* Darker blue on hover */
+}
+
+.back-button {
+    background: #2196F3; /* Blue color */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.back-button:hover {
+    background: #1976D2; /* Darker blue on hover */
+}
+
+.answer-button {
+    background: #2196F3; /* Blue color */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px 0;
+}
+
+.answer-button:hover {
+    background: #1976D2; /* Darker blue on hover */
+}
+
+#feedback {
+    font-size: 16px;
+    margin-top: 10px;
+    color: red;
+}
